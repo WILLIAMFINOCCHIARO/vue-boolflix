@@ -1,15 +1,29 @@
+s (26 sloc) 446 Bytes
 <template>
   <main>
-    <Searchbar />
+    <MovieCard
+      v-for="(result, index) in dataShared.searchResults"
+      :key="index"
+      :infos="result"
+    />
   </main>
 </template>
 
 <script>
-import Searchbar from "../commons/Searchbar.vue";
+import dataShared from "../../shared/dataShared.js";
+import MovieCard from "../sections/ListCard.vue";
 export default {
   name: "Main",
   components: {
-    Searchbar,
+    MovieCard,
+  },
+  data() {
+    return {
+      dataShared,
+    };
   },
 };
 </script>
+
+<style lang="scss" scoped>
+</style>
