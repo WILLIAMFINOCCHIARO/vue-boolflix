@@ -1,8 +1,8 @@
 <template>
-  <div class="searchbar-container">
-    <h2>Cerca un film</h2>
+  <div class="searchbar">
+    <h2>Cerca film</h2>
     <div class="search-area">
-      <input type="text" name="searchbar" id="searchbar" v-model="dataShared.selectVal"/>
+      <input type="text" name="searchbar" id="searchbar">
       <button>Cerca</button>
     </div>
   </div>
